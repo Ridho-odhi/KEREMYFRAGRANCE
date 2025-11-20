@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keremy Fragrance | Temukan Aroma Khas Anda</title>
+    <!-- Muat Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Konfigurasi Font (Menggunakan Inter sebagai default) -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f3f0; /* Warna dasar krem lembut */
+        }
+        .text-gold {
+            color: #b79c78; /* Warna emas tua/krem yang elegan */
+        }
+        .bg-dark-velvet {
+            background-color: #1e1e1e; /* Hitam pekat untuk kontras */
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- HEADER & NAVIGASI -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo (Diperbarui menjadi Keremy Fragrance) -->
+                <a href="#" class="text-2xl font-bold tracking-widest text-dark-velvet">
+                    KEREMY
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#koleksi" class="hover:text-gold transition duration-150">Koleksi</a>
+                    <a href="#fitur" class="hover:text-gold transition duration-150">Mengapa Kami</a>
+                    <a href="#" class="hover:text-gold transition duration-150">Edisi Terbatas</a>
+                    <a href="#" class="hover:text-gold transition duration-150">Kontak</a>
+                </nav>
+
+                <!-- Ikon Keranjang & Mobile Menu Button -->
+                <div class="flex items-center space-x-4">
+                    <!-- Ikon Keranjang (Menggunakan SVG inline) -->
+                    <button class="p-2 rounded-full hover:bg-gray-100 transition duration-150 relative">
+                        <svg class="w-6 h-6 text-dark-velvet" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <span class="absolute top-1 right-1 w-4 h-4 text-xs bg-gold text-white rounded-full flex items-center justify-center">2</span>
+                    </button>
+
+                    <!-- Mobile Hamburger Button -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100 transition duration-150 focus:outline-none">
+                        <svg id="menu-icon-open" class="w-6 h-6 text-dark-velvet" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                        <svg id="menu-icon-close" class="w-6 h-6 text-dark-velvet hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Tertutup secara default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+                <a href="#koleksi" class="py-2 px-3 text-dark-velvet hover:bg-gray-50 rounded-md font-medium">Koleksi</a>
+                <a href="#fitur" class="py-2 px-3 text-dark-velvet hover:bg-gray-50 rounded-md font-medium">Mengapa Kami</a>
+                <a href="#" class="py-2 px-3 text-dark-velvet hover:bg-gray-50 rounded-md font-medium">Edisi Terbatas</a>
+                <a href="#" class="py-2 px-3 text-dark-velvet hover:bg-gray-50 rounded-md font-medium">Kontak</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="relative h-[60vh] sm:h-[70vh] flex items-center justify-center overflow-hidden">
+            <!-- Background Image Placeholder -->
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://placehold.co/1200x800/222222/f7f3f0?text=KEREMY+FRAGRANCE');">
+                <div class="absolute inset-0 bg-black opacity-40"></div>
+            </div>
+
+            <!-- Konten Utama Hero -->
+            <div class="relative text-center text-white p-4">
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-light tracking-wide mb-4">
+                    Temukan Aroma Khas Anda
+                </h1>
+                <p class="text-base sm:text-xl font-extralight mb-8 max-w-xl mx-auto">
+                    Koleksi wewangian artisanal yang dirancang untuk meningkatkan aura unik Anda.
+                </p>
+                <a href="#koleksi" class="inline-block px-8 py-3 text-sm font-semibold uppercase tracking-wider bg-gold text-dark-velvet rounded-full shadow-lg hover:bg-opacity-90 transition duration-300 transform hover:scale-[1.03]">
+                    Jelajahi Koleksi
+                </a>
+            </div>
+        </section>
+
+        <!-- KOLEKSI UNGGULAN -->
+        <section id="koleksi" class="py-16 sm:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-light text-center mb-12 tracking-wider">
+                    Koleksi Unggulan
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Kartu Produk 1: The Midnight Bloom -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300">
+                        <div class="h-64 bg-gray-100 flex items-center justify-center p-6">
+                            <!-- Image URL for Midnight Bloom -->
+                            <img src="[attachment_0](attachment)" alt="Botol Parfum Midnight Bloom" onerror="this.onerror=null;this.src='https://placehold.co/300x400/e9e7e5/333333?text=Midnight+Bloom';" class="w-full h-full object-cover group-hover:scale-[1.05] transition duration-500 rounded-lg">
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-medium mb-1 text-dark-velvet">Midnight Bloom</h3>
+                            <p class="text-sm text-gray-500 mb-4">Jasmine, Amber, Sandalwood</p>
+                            <p class="text-2xl font-semibold text-gold mb-4">Rp 1.250.000</p>
+                            <button class="w-full py-3 text-sm font-semibold uppercase bg-dark-velvet text-white rounded-full hover:bg-gray-700 transition duration-300">
+                                Tambah ke Keranjang
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Kartu Produk 2: Coastal Breeze -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300">
+                        <div class="h-64 bg-gray-100 flex items-center justify-center p-6">
+                            <!-- Image URL for Coastal Breeze -->
+                            <img src="[attachment_1](attachment)" alt="Botol Parfum Coastal Breeze" onerror="this.onerror=null;this.src='https://placehold.co/300x400/e9e7e5/333333?text=Coastal+Breeze';" class="w-full h-full object-cover group-hover:scale-[1.05] transition duration-500 rounded-lg">
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-medium mb-1 text-dark-velvet">Coastal Breeze</h3>
+                            <p class="text-sm text-gray-500 mb-4">Sea Salt, Bergamot, Musk</p>
+                            <p class="text-2xl font-semibold text-gold mb-4">Rp 980.000</p>
+                            <button class="w-full py-3 text-sm font-semibold uppercase bg-dark-velvet text-white rounded-full hover:bg-gray-700 transition duration-300">
+                                Tambah ke Keranjang
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Kartu Produk 3: Velvet Oudh -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300">
+                        <div class="h-64 bg-gray-100 flex items-center justify-center p-6">
+                            <!-- Image URL for Velvet Oudh -->
+                            <img src="[attachment_2](attachment)" alt="Botol Parfum Velvet Oudh" onerror="this.onerror=null;this.src='https://placehold.co/300x400/e9e7e5/333333?text=Velvet+Oudh';" class="w-full h-full object-cover group-hover:scale-[1.05] transition duration-500 rounded-lg">
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-medium mb-1 text-dark-velvet">Velvet Oudh</h3>
+                            <p class="text-sm text-gray-500 mb-4">Oudh, Rose, Patchouli</p>
+                            <p class="text-2xl font-semibold text-gold mb-4">Rp 1.599.000</p>
+                            <button class="w-full py-3 text-sm font-semibold uppercase bg-dark-velvet text-white rounded-full hover:bg-gray-700 transition duration-300">
+                                Tambah ke Keranjang
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- MENGAPA MEMILIH KAMI (FITUR) -->
+        <section id="fitur" class="bg-dark-velvet text-white py-16 sm:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-light text-gold mb-12 tracking-wider">
+                    Dedikasi pada Keunggulan
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+                    <!-- Fitur 1 -->
+                    <div class="p-6 rounded-xl border border-gray-700/50 hover:border-gold transition duration-300">
+                        <svg class="w-10 h-10 text-gold mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 0012 21a12.001 12.001 0 008.618-3.016z"></path>
+                        </svg>
+                        <h3 class="text-xl font-medium mb-2">Kualitas Tanpa Kompromi</h3>
+                        <p class="text-gray-400 text-sm">Kami hanya menggunakan bahan baku paling langka dan berkualitas tinggi yang bersumber secara etis dari seluruh dunia.</p>
+                    </div>
+
+                    <!-- Fitur 2 -->
+                    <div class="p-6 rounded-xl border border-gray-700/50 hover:border-gold transition duration-300">
+                        <svg class="w-10 h-10 text-gold mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V9a1 1 0 00-1-1H7a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1v-1m5-1a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1v-5a1 1 0 00-1-1h-5z"></path>
+                        </svg>
+                        <h3 class="text-xl font-medium mb-2">Kerajinan Tangan Artistik</h3>
+                        <p class="text-gray-400 text-sm">Setiap botol dibuat dengan tangan oleh ahli parfum kami, sebuah proses yang membutuhkan kesabaran dan keahlian sejati.</p>
+                    </div>
+
+                    <!-- Fitur 3 -->
+                    <div class="p-6 rounded-xl border border-gray-700/50 hover:border-gold transition duration-300">
+                        <svg class="w-10 h-10 text-gold mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                        </svg>
+                        <h3 class="text-xl font-medium mb-2">Edisi Eksklusif</h3>
+                        <p class="text-gray-400 text-sm">Akses ke wewangian edisi terbatas yang hanya tersedia untuk komunitas Keremy Fragrance kami.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA - Ajakan Bertindak -->
+        <section class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-2xl sm:text-3xl font-light mb-4 text-dark-velvet">
+                    Siap Menciptakan Jejak Aroma Anda?
+                </h2>
+                <p class="mb-8 text-gray-600 max-w-lg mx-auto">
+                    Daftar ke buletin kami dan dapatkan diskon 10% untuk pesanan pertama Anda.
+                </p>
+                <form class="max-w-md mx-auto flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <input type="email" placeholder="Masukkan Email Anda" class="w-full px-5 py-3 border border-gray-300 rounded-full focus:ring-gold focus:border-gold transition duration-300" required>
+                    <button type="submit" class="sm:w-auto px-8 py-3 text-sm font-semibold uppercase bg-gold text-dark-velvet rounded-full shadow-md hover:bg-opacity-80 transition duration-300">
+                        Daftar Sekarang
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark-velvet text-gray-300 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 border-b border-gray-700 pb-8">
+                <!-- Kolom 1: Logo & Deskripsi -->
+                <div>
+                    <h4 class="text-2xl font-bold tracking-widest text-gold mb-4">KEREMY</h4>
+                    <p class="text-sm">Parfum yang menceritakan sebuah kisah. Kerajinan tangan dan didedikasikan untuk keindahan yang abadi.</p>
+                </div>
+
+                <!-- Kolom 2: Tautan Cepat -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Belanja</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#koleksi" class="hover:text-gold transition duration-150">Semua Parfum</a></li>
+                        <li><a href="#" class="hover:text-gold transition duration-150">Pria</a></li>
+                        <li><a href="#" class="hover:text-gold transition duration-150">Wanita</a></li>
+                        <li><a href="#" class="hover:text-gold transition duration-150">Edisi Khusus</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kolom 3: Layanan Pelanggan -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Layanan</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-gold transition duration-150">Pengiriman & Pengembalian</a></li>
+                        <li><a href="#" class="hover:text-gold transition duration-150">FAQ</a></li>
+                        <li><a href="#" class="hover:text-gold transition duration-150">Hubungi Kami</a></li>
+                        <li><a href="#" class="hover:text-gold transition duration-150">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kolom 4: Sosial Media -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Ikuti Kami</h4>
+                    <div class="flex space-x-4">
+                        <!-- Ikon Sosial Media (Placeholder SVG) -->
+                        <a href="#" class="hover:text-gold transition duration-150">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.233 2.632 7.823 6.347 9.208.463.085.632-.2.632-.446 0-.22-.008-.806-.013-1.57-2.56.55-3.097-1.233-3.097-1.233-.418-1.06-.99-1.341-.99-1.341-.806-.55.06-.539.06-.539.89.06 1.359.866 1.359.866.792 1.357 2.073.964 2.574.737.076-.572.31-.964.566-1.185-1.947-.22-3.99-1.077-3.99-4.254 0-.939.336-1.708.887-2.311-.09-.22-.383-1.096.085-2.28 0 0 .724-.233 2.375.882.688-.192 1.416-.288 2.145-.291.728.003 1.456.099 2.145.291 1.651-1.115 2.375-.882 2.375-.882.468 1.184.175 2.06.085 2.28.551.603.887 1.372.887 2.311 0 3.185-2.043 4.032-3.997 4.248.318.275.602.83.602 1.674 0 1.21-.011 2.181-.011 2.482 0 .248.167.536.636.445C19.366 19.823 22 16.233 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                        </a>
+                        <a href="#" class="hover:text-gold transition duration-150">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7.05 2c-2.486 0-4.05 1.76-4.05 4.312v11.376c0 2.553 1.564 4.312 4.05 4.312h9.9c2.486 0 4.05-1.76 4.05-4.312V6.312c0-2.553-1.564-4.312-4.05-4.312H7.05zm.36 1.8h9.18c1.928 0 2.92 1.055 2.92 2.156v10.976c0 1.102-.992 2.156-2.92 2.156H7.41c-1.928 0-2.92-1.054-2.92-2.156V5.956c0-1.101.992-2.156 2.92-2.156zm1.18 2.413A2.868 2.868 0 0012 8.794a2.868 2.868 0 003.414 2.837 2.868 2.868 0 002.837-3.414 2.868 2.868 0 00-2.837-2.837 2.868 2.868 0 00-3.414 2.837zm0 2.414A.454.454 0 0112 8.34a.454.454 0 01.454.454c0 .25-.204.454-.454.454s-.454-.204-.454-.454zM12 17.5a.75.75 0 01-.75-.75v-6.5a.75.75 0 011.5 0v6.5c0 .414-.336.75-.75.75zM15 15.5a.75.75 0 01-.75-.75v-4.5a.75.75 0 011.5 0v4.5c0 .414-.336.75-.75.75zM9 15.5a.75.75 0 01-.75-.75v-4.5a.75.75 0 011.5 0v4.5c0 .414-.336.75-.75.75z"/></svg>
+                        </a>
+                        <a href="#" class="hover:text-gold transition duration-150">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.25 6.467c-.646.287-1.341.48-2.072.565.74-.445 1.299-1.144 1.564-1.986-.694.412-1.464.71-2.285.867-.655-.694-1.587-1.127-2.618-1.127-1.983 0-3.592 1.609-3.592 3.592 0 .28.03.55.085.81-2.986-.15-5.635-1.578-7.408-3.738-.308.53-.485 1.147-.485 1.815 0 1.246.634 2.348 1.597 2.992-.589-.018-1.142-.18-1.625-.448 0 0 0 .045 0 .054 0 1.745 1.24 3.197 2.883 3.528-.3.08-.616.123-.934.128-.23 0-.455-.02-.674-.06.457 1.429 1.78 2.47 3.353 2.502-1.233.967-2.782 1.545-4.463 1.545-.29 0-.575-.017-.853-.05 1.593 1.023 3.486 1.624 5.53 1.624 6.63 0 10.245-5.513 10.245-10.245 0-.156-.003-.31-.01-.465.704-.508 1.314-1.14 1.8-1.855z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hak Cipta -->
+            <div class="text-center text-xs border-t border-gray-700 pt-8">
+                &copy; 2025 Keremy Fragrance. Hak Cipta Dilindungi. Didesain dengan keanggunan.
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOGIKA JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const
